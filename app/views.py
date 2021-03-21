@@ -8,7 +8,7 @@ def index(request):
 
     url = "https://www.timeanddate.com/weather/pakistan/islamabad/ext"
     #city = input("enter the name of the city of pakistan that you want to find wheter: ")
-    page = url.format(url)
+    #page = url.format(url)
     response = requests.get(url)
     soup = BeautifulSoup(response.text, 'html.parser')
     table = soup.select('tbody tr')
